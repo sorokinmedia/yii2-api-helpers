@@ -7,7 +7,7 @@ use sorokinmedia\api_helpers\CrudModels\CrudOrder;
  * Class Unorderable
  * @package sorokinmedia\api_helpers\CrudModels\orders
  */
-class Unorderable extends CrudOrder
+class CrudUnorderable extends CrudOrder
 {
     /**
      * Unorderable constructor.
