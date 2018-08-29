@@ -1,11 +1,10 @@
 <?php
 namespace sorokinmedia\api_helpers\Controller;
 
-use sorokinmedia\api_helpers\ApiHelpersComponent;
-use sorokinmedia\api_helpers\ErrorAction\ErrorAction;
-use sorokinmedia\api_helpers\Serializer\Serializer;
+use sorokinmedia\api_helpers\{
+    ApiHelpersComponent,ErrorAction\ErrorAction,Serializer\Serializer
+};
 use yii\filters\ContentNegotiator;
-use yii\filters\auth\HttpBearerAuth;
 use yii\web\Response;
 
 /**
