@@ -66,8 +66,8 @@ class Controller extends \yii\rest\Controller
      */
     public function behaviors()
     {
-        /** @var ApiHelpersComponent $api_helpers_component */
-        $api_helpers_component = \Yii::$app->get('api-helpers');
+        /** @var ApiHelpersComponent $apiHelpers */
+        $apiHelpers = \Yii::$app->get('apiHelpers');
         return [
             'contentNegotiator' => [
                 'class' => ContentNegotiator::class,
@@ -76,8 +76,8 @@ class Controller extends \yii\rest\Controller
                 ],
             ],
             'authenticator' => [
-                'class' => $api_helpers_component->authenticator_class,
-                'except' => $api_helpers_component->authenticator_excerpt,
+                'class' => $apiHelpers->authenticator_class,
+                'except' => $apiHelpers->authenticator_excerpt,
             ],
         ];
     }
