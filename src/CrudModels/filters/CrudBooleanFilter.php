@@ -1,11 +1,11 @@
 <?php
-namespace sorokinmedia\api_helpers\CrudModel\filters;
+namespace sorokinmedia\api_helpers\CrudModels\filters;
 
 use sorokinmedia\api_helpers\CrudModels\CrudFilter;
 
 /**
  * Class CrudBooleanFilter
- * @package sorokinmedia\api_helpers\CrudModel\filters
+ * @package sorokinmedia\api_helpers\CrudModels\filters
  */
 class CrudBooleanFilter extends CrudFilter
 {

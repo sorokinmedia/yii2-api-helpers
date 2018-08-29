@@ -1,11 +1,11 @@
 <?php
-namespace sorokinmedia\api_helpers\CrudModel\orders;
+namespace sorokinmedia\api_helpers\CrudModels\orders;
 
 use sorokinmedia\api_helpers\CrudModels\CrudOrder;
 
 /**
  * Class Unorderable
- * @package sorokinmedia\api_helpers\CrudModel\orders
+ * @package sorokinmedia\api_helpers\CrudModels\orders
  */
 class Unorderable extends CrudOrder
 {
