@@ -21,6 +21,15 @@ class CrudColumn extends Model
     public $filter;
     public $order;
 
+    const TYPE_INTEGER = 'integer';
+    const TYPE_NUMBER = 'number';
+    const TYPE_SELECT = 'select';
+    const TYPE_STRING = 'string';
+    const TYPE_TEXT = 'text';
+    const TYPE_DATE = 'date';
+    const TYPE_BOOLEAN = 'boolean';
+    const TYPE_ACTIONS = 'actions';
+
     /**
      * CrudColumn constructor.
      * @param array $config
