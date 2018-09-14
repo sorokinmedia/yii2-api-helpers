@@ -29,6 +29,7 @@ class CrudColumn extends Model
     const TYPE_DATE = 'date';
     const TYPE_BOOLEAN = 'boolean';
     const TYPE_OBJECT = 'object';
+    const TYPE_ARRAY = 'array';
     const TYPE_ACTIONS = 'actions';
 
     /**
