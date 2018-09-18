@@ -15,6 +15,7 @@ use yii\base\Model;
 class CrudFilter extends Model
 {
     const TYPE_SELECT = 'select';
+    const TYPE_SELECT_ONE = 'select_one';
     const TYPE_TEXT = 'input_text';
     const TYPE_NUMBER = 'input_number';
     const TYPE_DATE = 'date_picker';
