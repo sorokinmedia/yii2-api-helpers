@@ -9,6 +9,7 @@ use yii\base\Model;
  *
  * @property string $id
  * @property string $icon
+ * @property string $btn_class
  * @property string $name
  * @property string $type
  * @property string $method
@@ -18,6 +19,7 @@ class ApiAnswerAction extends Model
 {
     public $id;
     public $icon;
+    public $btn_class;
     public $name;
     public $type;
     public $method;
