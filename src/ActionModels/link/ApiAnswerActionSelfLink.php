@@ -4,10 +4,10 @@ namespace sorokinmedia\api_helpers\ActionModels\link;
 use sorokinmedia\api_helpers\ActionModels\ApiAnswerAction;
 
 /**
- * Class ApiAnswerActionSameLink
+ * Class ApiAnswerActionSelfLink
  * @package sorokinmedia\api_helpers\ActionModels\link
  */
-class ApiAnswerActionSameLink extends ApiAnswerAction
+class ApiAnswerActionSelfLink extends ApiAnswerAction
 {
     /**
      * ApiAnswerActionSameLink constructor.
@@ -17,6 +17,6 @@ class ApiAnswerActionSameLink extends ApiAnswerAction
     {
         parent::__construct($config);
         $this->type = self::TYPE_LINK;
-        $this->method = self::METHOD_SAME;
+        $this->method = self::METHOD_SELF;
     }
 }

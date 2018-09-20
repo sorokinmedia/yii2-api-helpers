@@ -33,7 +33,7 @@ class ApiAnswerAction extends Model
     const METHOD_DELETE = 'DELETE';
 
     const METHOD_BLANK = 'blank';
-    const METHOD_SAME = 'same';
+    const METHOD_SELF = 'self';
 
     /**
      * ApiAnswerAction constructor.
