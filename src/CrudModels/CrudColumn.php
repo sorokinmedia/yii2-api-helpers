@@ -31,6 +31,7 @@ class CrudColumn extends Model
     const TYPE_OBJECT = 'object';
     const TYPE_ARRAY = 'array';
     const TYPE_ACTIONS = 'actions';
+    const TYPE_LINK = 'link';
 
     /**
      * CrudColumn constructor.
