@@ -8,11 +8,11 @@ use yii\base\InvalidRouteException;
 use yii\base\Module;
 
 /**
+ * Общий API контроллер
+ * Все API контроллеры наследовать от этого контроллера
+ *
  * Class ApiController
  * @package sorokinmedia\api_helpers\Controller
- *
- * общий API контроллер
- * все API контроллеры наследовать от этого контроллера
  */
 class ApiController extends Controller
 {

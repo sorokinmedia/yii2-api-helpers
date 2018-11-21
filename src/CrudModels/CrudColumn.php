@@ -4,14 +4,16 @@ namespace sorokinmedia\api_helpers\CrudModels;
 use yii\base\Model;
 
 /**
+ * Модель для описания колонки в CRUD сервисах
+ *
  * Class Column
  * @package sorokinmedia\api_helpers\CrudModels
  *
- * @property string $id
- * @property string $label
- * @property string $type
- * @property CrudFilter $filter
- * @property CrudOrder $order
+ * @property string $id ID колонки, используется для сортировки и фильтров
+ * @property string $title Название колонки, которое видит пользователь
+ * @property string $type Тип колонки. К выбранному типу привязана работа фронтового компонента
+ * @property CrudFilter $filter Объект фильтрации. Задает параметры фильтрации по колонке
+ * @property CrudOrder $order Объект сортировки. Задает параметры сортировки по колонке
  */
 class CrudColumn extends Model
 {
@@ -35,6 +37,9 @@ class CrudColumn extends Model
     const TYPE_EDITOR = 'editor';
 
     /**
+     * основные атрибуты передаются в виде массива - атрибут => значение ($config)
+     * объект фильтрации и объект сортировки передаются объектами ($filter, $order)
+     *
      * CrudColumn constructor.
      * @param array $config
      * @param CrudFilter $filter

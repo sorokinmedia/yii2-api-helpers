@@ -4,6 +4,9 @@ namespace sorokinmedia\api_helpers\ApiAnswer;
 use sorokinmedia\api_helpers\Controller\ApiController;
 
 /**
+ * Класс, описывающий ошибку, при которой не найдена указанная модель (обычно по ID в урле сервиса)
+ * Сообщение выводится пользователю
+ *
  * Class ApiAnswerModelNotFound
  * @package sorokinmedia\api_helpers\ApiAnswer
  */

@@ -5,11 +5,13 @@ use yii\base\Component;
 use yii\filters\auth\HttpBearerAuth;
 
 /**
+ * Файл компонента. Имеет возможность настройки через config
+ *
  * Class ApiHelpersComponent
  * @package sorokinmedia\api_helpers
  *
- * @property string $authenticator_class
- * @property array $authenticator_excerpt
+ * @property string $authenticator_class Класс, который будет использоваться для аутентификации
+ * @property array $authenticator_excerpt Массив экшенов, для которых будет отключена аутентификация
  */
 class ApiHelpersComponent extends Component
 {

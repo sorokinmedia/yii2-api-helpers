@@ -4,6 +4,9 @@ namespace sorokinmedia\api_helpers\ApiAnswer;
 use sorokinmedia\api_helpers\Controller\ApiController;
 
 /**
+ * Класс, описывающий ошибку валидации входящих параметров
+ * Сообщение выводится пользователю
+ *
  * Class ApiAnswerParamValidationError
  * @package sorokinmedia\api_helpers\ApiAnswer
  */

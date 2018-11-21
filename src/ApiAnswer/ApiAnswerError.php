@@ -4,6 +4,9 @@ namespace sorokinmedia\api_helpers\ApiAnswer;
 use sorokinmedia\api_helpers\Controller\ApiController;
 
 /**
+ * Класс, описывающий ответ сервера при ошибке
+ * Текст ошибки выводится пользователю
+ *
  * Class ApiAnswerError
  * @package sorokinmedia\api_helpers\ApiAnswer
  */

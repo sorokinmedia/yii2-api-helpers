@@ -4,6 +4,8 @@ namespace sorokinmedia\api_helpers\CrudModels\filters;
 use sorokinmedia\api_helpers\CrudModels\CrudFilter;
 
 /**
+ * Класс, который сообщает фронту, что фильтрация по этой колонке невозможна
+ *
  * Class CrudNoFilter
  * @package sorokinmedia\api_helpers\CrudModels\filters
  */

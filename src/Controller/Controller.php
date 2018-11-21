@@ -8,12 +8,12 @@ use yii\filters\ContentNegotiator;
 use yii\web\Response;
 
 /**
+ * Общий контроллер
+ * Использует свой Serializer/ErrorAction
+ * Можно передать через настройки компонента исключения по аутентификации
+ *
  * Class Controller
  * @package sorokinmedia\api_helpers\Controller
- *
- * общий контроллер
- * использует свой Serializer/ErrorAction
- * можно передать через настройки компонента исключения по аутентификации
  */
 class Controller extends \yii\rest\Controller
 {

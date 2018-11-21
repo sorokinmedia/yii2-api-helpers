@@ -5,12 +5,14 @@ use yii\base\Component;
 use yii\base\Model;
 
 /**
+ * Класс, описывающий сообщения в ответе сервера по API
+ *
  * Class RestMessage
  * @package sorokinmedia\api_helpers\ApiAnswer
  *
- * @property int $type
- * @property string $message
- * @property string $targetField
+ * @property int $type Тип сообщения
+ * @property string $message Текст сообщения
+ * @property string $targetField Связанные с сообщением поля (атрибуты)
  */
 class RestMessage extends Component
 {

@@ -4,6 +4,8 @@ namespace sorokinmedia\api_helpers\CrudModels\filters;
 use sorokinmedia\api_helpers\CrudModels\CrudFilter;
 
 /**
+ * Класс булева фильтра. Во фронтовой реализации чек-бокс
+ *
  * Class CrudBooleanFilter
  * @package sorokinmedia\api_helpers\CrudModels\filters
  */

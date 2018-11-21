@@ -7,10 +7,10 @@ use yii\base\{
 use yii\web\HttpException;
 
 /**
+ * Подменяет ответ сервера в случае возникновения ошибки
+ *
  * Class ErrorAction
  * @package sorokinmedia\api_helpers
- *
- * подменяет ответ сервера в случае возникновения ошибки
  */
 class ErrorAction extends Action
 {

@@ -4,6 +4,9 @@ namespace sorokinmedia\api_helpers\ApiAnswer;
 use sorokinmedia\api_helpers\Controller\ApiController;
 
 /**
+ * Класс, описывающий ответ сервера при запрете доступа
+ * Сообщение выводится пользователю
+ *
  * Class ApiAnswerForbidden
  * @package sorokinmedia\api_helpers\ApiAnswer
  */

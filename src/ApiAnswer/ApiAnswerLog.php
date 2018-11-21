@@ -4,6 +4,9 @@ namespace sorokinmedia\api_helpers\ApiAnswer;
 use sorokinmedia\api_helpers\Controller\ApiController;
 
 /**
+ * Класс, описывающий ответ сервера, при котором важна передача ответа с данными
+ * Сообщение не выводится пользователю
+ *
  * Class ApiAnswerLog
  * @package sorokinmedia\api_helpers\ApiAnswer
  */

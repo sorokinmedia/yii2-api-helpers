@@ -6,6 +6,8 @@ use yii\validators\Validator;
 use sorokinmedia\api_helpers\Controller\ApiController;
 
 /**
+ * Валидатор соответствия кода ответа внутренним кодам
+ *
  * Class ApiAnswerValidator
  * @package sorokinmedia\api_helpers\validators
  */

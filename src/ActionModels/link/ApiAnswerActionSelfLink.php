@@ -4,6 +4,9 @@ namespace sorokinmedia\api_helpers\ActionModels\link;
 use sorokinmedia\api_helpers\ActionModels\ApiAnswerAction;
 
 /**
+ * Класс, описывающий действие в виде ссылки, открывающейся в новом же окне
+ * Необходимо задание обязательных параметров: id, name, url
+ *
  * Class ApiAnswerActionSelfLink
  * @package sorokinmedia\api_helpers\ActionModels\link
  */

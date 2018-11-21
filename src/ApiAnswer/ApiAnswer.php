@@ -5,16 +5,17 @@ use yii\base\Model;
 use sorokinmedia\api_helpers\validators\ApiAnswerValidator;
 
 /**
+ * Стандартная форма ответа API сервисов
+ * Другие классы ответов наследуются от этого класса
+ * Используется валидатор для проверки соответствия ответа заданной модели
+ * Чтобы обойти валидатор надо в api action использовать команду exit();
+ *
  * Class ApiAnswer
  * @package sorokinmedia\api_helpers\ApiAnswer
  *
- * стандартная форма ответа API сервисов
- * используется валидатор для проверки соответствия ответа заданной модели
- * чтобы обойти валидатор надо в api action использовать команду exit();
- *
- * @property $response
- * @property int $status
- * @property array $messages
+ * @property $response Содержание ответа
+ * @property int $status Статус ответа
+ * @property array $messages Массив сообщений
  */
 class ApiAnswer extends Model
 {

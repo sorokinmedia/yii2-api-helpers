@@ -4,10 +4,10 @@ namespace sorokinmedia\api_helpers\Serializer;
 use yii\web\Link;
 
 /**
+ * Сериалайзер изменяет отдачу стандартных yii вещей в апи
+ *
  * Class Serializer
  * @package sorokinmedia\api_helpers\Serializer
- *
- * сериалайзер изменяет отдачу стандартных yii вещей в апи
  */
 class Serializer extends \yii\rest\Serializer
 {

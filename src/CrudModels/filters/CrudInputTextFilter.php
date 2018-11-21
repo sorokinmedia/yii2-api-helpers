@@ -4,6 +4,8 @@ namespace sorokinmedia\api_helpers\CrudModels\filters;
 use sorokinmedia\api_helpers\CrudModels\CrudFilter;
 
 /**
+ * Класс текстового фильтра. Во фронтовой реализации текстовый инпут
+ *
  * Class CrudInputTextFilter
  * @package sorokinmedia\api_helpers\CrudModels\filters
  */

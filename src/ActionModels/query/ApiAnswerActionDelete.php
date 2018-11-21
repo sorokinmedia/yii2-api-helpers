@@ -4,6 +4,9 @@ namespace sorokinmedia\api_helpers\ActionModels\query;
 use sorokinmedia\api_helpers\ActionModels\ApiAnswerAction;
 
 /**
+ * Класс, описывающий действие в виде DELETE запроса
+ * Необходимо задание обязательных параметров: id, name, url
+ *
  * Class ApiAnswerActionDelete
  * @package sorokinmedia\api_helpers\ActionModels\query
  */

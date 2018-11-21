@@ -5,6 +5,9 @@ use sorokinmedia\api_helpers\Controller\ApiController;
 use yii\base\Model;
 
 /**
+ * Класс, описывающий ошибку валидации формы
+ * Сообщение выводится пользователю
+ *
  * Class ApiAnswerFormValidationError
  * @package sorokinmedia\api_helpers\ApiAnswer
  */

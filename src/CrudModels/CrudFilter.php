@@ -4,13 +4,15 @@ namespace sorokinmedia\api_helpers\CrudModels;
 use yii\base\Model;
 
 /**
+ * Общий класс для данных по фильтрации по колонке. Все остальные классы наследуются от этого класса.
+ *
  * Class CrudFilter
  * @package sorokinmedia\api_helpers\CrudModels
  *
- * @property bool $can
- * @property string $type
- * @property string $defaultValue
- * @property string $query
+ * @property bool $can Можно ли фильтровать
+ * @property string $type Тип фильтра, если есть
+ * @property string $defaultValue Дефолтное значение, если есть
+ * @property string $query Запрос в апи для получения массива данных для фильтра
  */
 class CrudFilter extends Model
 {

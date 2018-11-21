@@ -4,6 +4,8 @@ namespace sorokinmedia\api_helpers\CrudModels\orders;
 use sorokinmedia\api_helpers\CrudModels\CrudOrder;
 
 /**
+ * Класс, который сообщает фронту, что сортировать по этой колонке нельзя
+ *
  * Class Unorderable
  * @package sorokinmedia\api_helpers\CrudModels\orders
  */

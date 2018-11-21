@@ -4,6 +4,9 @@ namespace sorokinmedia\api_helpers\ApiAnswer;
 use sorokinmedia\api_helpers\Controller\ApiController;
 
 /**
+ * Класс, описывающий успешное выполнение операции
+ * Сообщение выводится пользователю
+ *
  * Class ApiAnswerSuccess
  * @package sorokinmedia\api_helpers\ApiAnswer
  */
