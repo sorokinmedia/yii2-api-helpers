@@ -1,4 +1,5 @@
 <?php
+
 namespace sorokinmedia\api_helpers\ApiAnswer;
 
 use sorokinmedia\api_helpers\Controller\ApiController;
@@ -15,35 +16,36 @@ class ApiAnswerFormValidationError extends ApiAnswer
 {
     /**
      * ApiAnswerFormValidationError constructor.
+     *
      * @param string|null $message
      * @param null $response
      * @param Model|null $form
      */
     public function __construct(string $message = null, $response = null, Model $form = null)
     {
-        if (is_null($message)){
-            $message = \Yii::t('app', 'Форма не прошла валидацию');
-        }
-        $errors_string = '';
-        if (!is_null($form)){
-            $errors = $form->getErrors();
-            if (!empty($errors)){
-                foreach ($errors as $param => $param_errors){
-                    foreach ($param_errors as $param_error){
-                        $errors_string .= $param . " => " . $param_error . "\n";
-                    }
-                }
+        $messages = [];
+
+        $messages[] = new RestMessage([
+            'type' => RestMessage::TYPE_VALIDATION_ERROR,
+            'message' => $message ? $message : \Yii::t('app', 'Форма не прошла валидацию'),
+            'targetField' => null
+        ]);
+
+        if ($form && $form->errors) {
+            foreach ($form->errors as $attribute => $attributeErrors) {
+                array_walk($attributeErrors, function ($attributeError) use (&$messages, &$attribute) {
+                    $messages[] = new RestMessage([
+                        'type' => RestMessage::TYPE_VALIDATION_ERROR,
+                        'message' => $attributeError,
+                        'targetField' => $attribute
+                    ]);
+                });
             }
         }
+
         parent::__construct([
             'response' => $response,
-            'messages' => [
-                new RestMessage([
-                    'type' => RestMessage::TYPE_VALIDATION_ERROR,
-                    'message' => $message . "\n" . $errors_string,
-                    'targetField' => null,
-                ]),
-            ],
+            'messages' => $messages,
             'status' => ApiController::STATUS_ERROR,
         ]);
     }
