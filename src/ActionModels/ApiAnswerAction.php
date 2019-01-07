@@ -29,6 +29,7 @@ class ApiAnswerAction extends Model
     public $url;
 
     const TYPE_LINK = 'link'; // тип действия ссылка
+    const TYPE_OUT_LINK = 'out-link'; // тип действия ссылка
     const TYPE_QUERY = 'query'; // тип действия запрос на API
 
     const METHOD_GET = 'GET'; // get запрос
