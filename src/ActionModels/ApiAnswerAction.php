@@ -17,6 +17,7 @@ use yii\base\Model;
  * @property string $type Тип действия. link - ссылка, query - запрос на API
  * @property string $method Метод запроса. Для ссылок: blank - в новом окне, self - в этом же окне. Для запросов: GET - get запрос, POST - post запрос, Delete - delete post
  * @property string $url URL ссылки или запроса
+ * @property bool $disabled Отображать ссылку со свойством disabled
  */
 class ApiAnswerAction extends Model
 {
@@ -27,6 +28,7 @@ class ApiAnswerAction extends Model
     public $type;
     public $method;
     public $url;
+    public $disabled = false;
 
     const TYPE_LINK = 'link'; // тип действия ссылка
     const TYPE_OUT_LINK = 'out-link'; // тип действия ссылка
