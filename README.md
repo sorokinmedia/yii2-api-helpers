@@ -1,5 +1,7 @@
 # Yii2 API helpers
 
+[![Total Downloads](https://img.shields.io/packagist/dt/sorokinmedia/yii2-api-helpers.svg)](https://packagist.org/packages/sorokinmedia/yii2-api-helpers)
+
 Компонент для стандартизации настройки и работы с API в Sorokin.Media
 
 Компонент содержит в себе набор заготовленных классов для упрощения и стандартизации написания сервисов для API.
