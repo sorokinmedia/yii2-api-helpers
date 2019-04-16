@@ -30,17 +30,17 @@ class ApiAnswerAction extends Model
     public $url;
     public $disabled = false;
 
-    public const TYPE_LINK = 'link'; // тип действия ссылка
-    public const TYPE_OUT_LINK = 'out-link'; // тип действия ссылка
-    public const TYPE_QUERY = 'query'; // тип действия запрос на API
+    const TYPE_LINK = 'link'; // тип действия ссылка
+    const TYPE_OUT_LINK = 'out-link'; // тип действия ссылка
+    const TYPE_QUERY = 'query'; // тип действия запрос на API
 
-    public const METHOD_GET = 'GET'; // get запрос
-    public const METHOD_PUT = 'PUT'; // put запрос
-    public const METHOD_POST = 'POST'; // post запрос
-    public const METHOD_DELETE = 'DELETE'; // delete запрос
+    const METHOD_GET = 'GET'; // get запрос
+    const METHOD_PUT = 'PUT'; // put запрос
+    const METHOD_POST = 'POST'; // post запрос
+    const METHOD_DELETE = 'DELETE'; // delete запрос
 
-    public const METHOD_BLANK = 'blank'; // открыть ссылку в новом окне
-    public const METHOD_SELF = 'self'; // открыть ссылку в этом же окне
+    const METHOD_BLANK = 'blank'; // открыть ссылку в новом окне
+    const METHOD_SELF = 'self'; // открыть ссылку в этом же окне
 
     /**
      * ApiAnswerAction constructor.
