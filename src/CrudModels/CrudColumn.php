@@ -37,6 +37,7 @@ class CrudColumn extends Model
     const TYPE_EDITOR = 'editor';
     const TYPE_HTML = 'html';
     const TYPE_ARRAY_OBJECTS = 'array_objects';
+    const TYPE_EXTENDED_ARRAY = 'array_ext';
 
     /**
      * основные атрибуты передаются в виде массива - атрибут => значение ($config)
