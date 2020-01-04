@@ -1,5 +1,8 @@
 <?php
+
 namespace sorokinmedia\api_helpers\Exception;
+
+use Exception;
 
 /**
  * Класс, описывающий ошибку в случае, когда ответ не проходит валидацию
@@ -7,7 +10,7 @@ namespace sorokinmedia\api_helpers\Exception;
  * Class RestAnswerException
  * @package sorokinmedia\api_helpers\Exception
  */
-class RestAnswerException extends \Exception
+class RestAnswerException extends Exception
 {
 
 }

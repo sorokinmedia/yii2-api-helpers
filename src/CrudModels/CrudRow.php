@@ -1,4 +1,5 @@
 <?php
+
 namespace sorokinmedia\api_helpers\CrudModels;
 
 use yii\base\Model;
@@ -11,12 +12,12 @@ use yii\base\Model;
  */
 class CrudRow extends Model
 {
-    const STATE_DEFAULT = 'default';
-    const STATE_PRIMARY = 'primary';
-    const STATE_SUCCESS = 'success';
-    const STATE_INFO    = 'info';
-    const STATE_WARNING = 'warning';
-    const STATE_DANGER  = 'danger';
+    public const STATE_DEFAULT = 'default';
+    public const STATE_PRIMARY = 'primary';
+    public const STATE_SUCCESS = 'success';
+    public const STATE_INFO = 'info';
+    public const STATE_WARNING = 'warning';
+    public const STATE_DANGER = 'danger';
 
     public $state = self::STATE_DEFAULT;
 

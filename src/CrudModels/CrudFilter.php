@@ -1,4 +1,5 @@
 <?php
+
 namespace sorokinmedia\api_helpers\CrudModels;
 
 use yii\base\Model;
@@ -16,12 +17,12 @@ use yii\base\Model;
  */
 class CrudFilter extends Model
 {
-    const TYPE_SELECT = 'select';
-    const TYPE_SELECT_ONE = 'select_one';
-    const TYPE_TEXT = 'input_text';
-    const TYPE_NUMBER = 'input_number';
-    const TYPE_DATE = 'date_picker';
-    const TYPE_BOOL = 'boolean';
+    public const TYPE_SELECT = 'select';
+    public const TYPE_SELECT_ONE = 'select_one';
+    public const TYPE_TEXT = 'input_text';
+    public const TYPE_NUMBER = 'input_number';
+    public const TYPE_DATE = 'date_picker';
+    public const TYPE_BOOL = 'boolean';
 
     public $can = false;
     public $type = 'input_text';

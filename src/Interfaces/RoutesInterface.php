@@ -1,4 +1,5 @@
 <?php
+
 namespace sorokinmedia\api_helpers\Interfaces;
 
 /**
@@ -12,5 +13,5 @@ interface RoutesInterface
     /**
      * @return array
      */
-    public static function getRoutes() : array;
+    public static function getRoutes(): array;
 }

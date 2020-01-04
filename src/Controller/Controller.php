@@ -1,10 +1,12 @@
 <?php
+
 namespace sorokinmedia\api_helpers\Controller;
 
-use sorokinmedia\api_helpers\{
-    ApiHelpersComponent,ErrorAction\ErrorAction,Serializer\Serializer
-};
+use sorokinmedia\api_helpers\{ApiHelpersComponent, ErrorAction\ErrorAction, Serializer\Serializer};
+use Yii;
+use yii\base\InvalidConfigException;
 use yii\filters\ContentNegotiator;
+use yii\web\BadRequestHttpException;
 use yii\web\Response;
 
 /**
@@ -20,9 +22,9 @@ class Controller extends \yii\rest\Controller
     public $serializer = Serializer::class; // замена сериалайзера
 
     /**
-     * @inheritdoc
+     * @return array
      */
-    public function actions()
+    public function actions(): array
     {
         return [
             'error' => ErrorAction::class,
@@ -32,26 +34,26 @@ class Controller extends \yii\rest\Controller
     /**
      * @return array
      */
-    public function actionError()
+    public function actionError(): array
     {
         return [
-            'error' => \Yii::t('app', 'Метод заперещен')
+            'error' => Yii::t('app', 'Метод заперещен')
         ];
     }
 
     /**
      * @param $action
      * @return bool
-     * @throws \yii\web\BadRequestHttpException
+     * @throws BadRequestHttpException
      */
-    public function beforeAction($action)
+    public function beforeAction($action): bool
     {
         if (parent::beforeAction($action)) {
             header('Access-Control-Allow-Origin: *');
-            header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
-            header("Access-Control-Allow-Methods: POST, PUT, GET, DELETE, OPTIONS");
-            header("Access-Control-Allow-Credentials: true");
-            header("Access-Control-Expose-Headers: content-type,X-Pagination-Current-Page, X-Pagination-Page-Count, X-Pagination-Per-Page, X-Pagination-Total-Count, X-Debug-Duration, X-Debug-Tag, X-Debug-Link");
+            header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization');
+            header('Access-Control-Allow-Methods: POST, PUT, GET, DELETE, OPTIONS');
+            header('Access-Control-Allow-Credentials: true');
+            header('Access-Control-Expose-Headers: content-type,X-Pagination-Current-Page, X-Pagination-Page-Count, X-Pagination-Per-Page, X-Pagination-Total-Count, X-Debug-Duration, X-Debug-Tag, X-Debug-Link');
             return true;
         }
         return false;
@@ -59,12 +61,12 @@ class Controller extends \yii\rest\Controller
 
     /**
      * @return array
-     * @throws \yii\base\InvalidConfigException
+     * @throws InvalidConfigException
      */
-    public function behaviors()
+    public function behaviors(): array
     {
         /** @var ApiHelpersComponent $apiHelpers */
-        $apiHelpers = \Yii::$app->get('apiHelpers');
+        $apiHelpers = Yii::$app->get('apiHelpers');
         return [
             'contentNegotiator' => [
                 'class' => ContentNegotiator::class,

@@ -1,4 +1,5 @@
 <?php
+
 namespace sorokinmedia\api_helpers\ActionModels\query;
 
 use sorokinmedia\api_helpers\ActionModels\ApiAnswerAction;

@@ -16,11 +16,11 @@ use yii\base\Model;
  */
 class RestMessage extends Component
 {
-    const TYPE_SUCCESS = 0; // успешное выполнение
-    const TYPE_VALIDATION_ERROR = 1; // ошибка валидации
-    const TYPE_SERVER_ERROR = 2; //серверная ошибка
-    const TYPE_LOG = 3; // лог
-    const TYPE_INFO = 4; // инфо
+    public const TYPE_SUCCESS = 0; // успешное выполнение
+    public const TYPE_VALIDATION_ERROR = 1; // ошибка валидации
+    public const TYPE_SERVER_ERROR = 2; //серверная ошибка
+    public const TYPE_LOG = 3; // лог
+    public const TYPE_INFO = 4; // инфо
 
 
     public $type;
@@ -36,7 +36,7 @@ class RestMessage extends Component
     public static function activeRecordErrors(Model $model, $messagesArray = []) : array
     {
         foreach ($model->errors as $errorKey => $errorMessage) {
-            $messagesArray[] = new RestMessage([
+            $messagesArray[] = new static([
                 'type' => self::TYPE_VALIDATION_ERROR,
                 'message' => (is_array($errorMessage) && isset($errorMessage[0])) ? $errorMessage[0] : (string)$errorMessage,
                 'targetField' => $errorKey,

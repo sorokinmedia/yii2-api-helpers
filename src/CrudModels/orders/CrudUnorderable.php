@@ -1,4 +1,5 @@
 <?php
+
 namespace sorokinmedia\api_helpers\CrudModels\orders;
 
 use sorokinmedia\api_helpers\CrudModels\CrudOrder;

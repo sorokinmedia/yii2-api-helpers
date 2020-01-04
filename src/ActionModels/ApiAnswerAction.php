@@ -1,4 +1,5 @@
 <?php
+
 namespace sorokinmedia\api_helpers\ActionModels;
 
 use yii\base\Model;
@@ -21,26 +22,24 @@ use yii\base\Model;
  */
 class ApiAnswerAction extends Model
 {
-    public $id;
-    public $icon;
-    public $btn_class;
-    public $name;
-    public $type;
-    public $method;
-    public $url;
-    public $disabled = false;
+    public const TYPE_LINK = 'link';
+    public const TYPE_OUT_LINK = 'out-link';
+    public const TYPE_QUERY = 'query';
+    public const METHOD_GET = 'GET';
+    public const METHOD_PUT = 'PUT';
+    public const METHOD_POST = 'POST';
+    public const METHOD_DELETE = 'DELETE';
+    public const METHOD_BLANK = 'blank';
+    public const METHOD_SELF = 'self'; // тип действия ссылка
 
-    const TYPE_LINK = 'link'; // тип действия ссылка
-    const TYPE_OUT_LINK = 'out-link'; // тип действия ссылка
-    const TYPE_QUERY = 'query'; // тип действия запрос на API
-
-    const METHOD_GET = 'GET'; // get запрос
-    const METHOD_PUT = 'PUT'; // put запрос
-    const METHOD_POST = 'POST'; // post запрос
-    const METHOD_DELETE = 'DELETE'; // delete запрос
-
-    const METHOD_BLANK = 'blank'; // открыть ссылку в новом окне
-    const METHOD_SELF = 'self'; // открыть ссылку в этом же окне
+    public $id; // тип действия ссылка
+    public $icon; // тип действия запрос на API
+    public $btn_class; // get запрос
+    public $name; // put запрос
+    public $type; // post запрос
+    public $method; // delete запрос
+    public $url; // открыть ссылку в новом окне
+    public $disabled = false; // открыть ссылку в этом же окне
 
     /**
      * ApiAnswerAction constructor.

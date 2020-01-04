@@ -1,7 +1,9 @@
 <?php
+
 namespace sorokinmedia\api_helpers\ApiAnswer;
 
 use sorokinmedia\api_helpers\Controller\ApiController;
+use Yii;
 
 /**
  * Класс, описывающий ответ сервера, при котором важна передача ответа с данными
@@ -20,8 +22,8 @@ class ApiAnswerLogInsertCache extends ApiAnswer
      */
     public function __construct(string $message = null, $response = null)
     {
-        if ($message === null){
-            $message = \Yii::t('app', 'Данные получены и записаны в кеш');
+        if ($message === null) {
+            $message = Yii::t('app', 'Данные получены и записаны в кеш');
         }
         parent::__construct([
             'response' => $response,

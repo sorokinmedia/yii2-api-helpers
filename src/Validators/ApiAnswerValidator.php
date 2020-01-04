@@ -1,9 +1,12 @@
 <?php
+
 namespace sorokinmedia\api_helpers\validators;
 
-use yii\base\Exception;
-use yii\validators\Validator;
 use sorokinmedia\api_helpers\Controller\ApiController;
+use Yii;
+use yii\base\Exception;
+use yii\base\Model;
+use yii\validators\Validator;
 
 /**
  * Валидатор соответствия кода ответа внутренним кодам
@@ -15,18 +18,18 @@ class ApiAnswerValidator extends Validator
 {
     /**
      * валидация кода ответа
-     * @param \yii\base\Model $model
+     * @param Model $model
      * @param string $attribute
      * @throws Exception
      */
-    public function validateAttribute($model, $attribute)
+    public function validateAttribute($model, $attribute): void
     {
         if (!in_array($model->$attribute, [
-                ApiController::STATUS_SUCCESS,
-                ApiController::STATUS_ERROR,
-                ApiController::STATUS_LOG,
-        ])) {
-            throw new Exception(\Yii::t('app', 'Неверный тип ответа'));
+            ApiController::STATUS_SUCCESS,
+            ApiController::STATUS_ERROR,
+            ApiController::STATUS_LOG
+        ], true)) {
+            throw new Exception(Yii::t('app', 'Неверный тип ответа'));
         }
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 namespace sorokinmedia\api_helpers\CrudModels;
 
 use yii\base\Model;
@@ -17,27 +18,26 @@ use yii\base\Model;
  */
 class CrudColumn extends Model
 {
+    public const TYPE_INTEGER = 'integer';
+    public const TYPE_NUMBER = 'number';
+    public const TYPE_SELECT = 'select';
+    public const TYPE_STRING = 'string';
+    public const TYPE_TEXT = 'text';
+    public const TYPE_DATE = 'date';
+    public const TYPE_BOOLEAN = 'boolean';
+    public const TYPE_OBJECT = 'object';
+    public const TYPE_ARRAY = 'array';
+    public const TYPE_ACTIONS = 'actions';
+    public const TYPE_LINK = 'link';
+    public const TYPE_EDITOR = 'editor';
+    public const TYPE_HTML = 'html';
+    public const TYPE_ARRAY_OBJECTS = 'array_objects';
+    public const TYPE_EXTENDED_ARRAY = 'array_ext';
     public $id;
     public $title;
     public $type;
     public $filter;
     public $order;
-
-    const TYPE_INTEGER = 'integer';
-    const TYPE_NUMBER = 'number';
-    const TYPE_SELECT = 'select';
-    const TYPE_STRING = 'string';
-    const TYPE_TEXT = 'text';
-    const TYPE_DATE = 'date';
-    const TYPE_BOOLEAN = 'boolean';
-    const TYPE_OBJECT = 'object';
-    const TYPE_ARRAY = 'array';
-    const TYPE_ACTIONS = 'actions';
-    const TYPE_LINK = 'link';
-    const TYPE_EDITOR = 'editor';
-    const TYPE_HTML = 'html';
-    const TYPE_ARRAY_OBJECTS = 'array_objects';
-    const TYPE_EXTENDED_ARRAY = 'array_ext';
 
     /**
      * основные атрибуты передаются в виде массива - атрибут => значение ($config)

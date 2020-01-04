@@ -1,7 +1,9 @@
 <?php
+
 namespace sorokinmedia\api_helpers\ApiAnswer;
 
 use sorokinmedia\api_helpers\Controller\ApiController;
+use Yii;
 
 /**
  * Класс, описывающий ошибку, при которой не найдена указанная модель (обычно по ID в урле сервиса)
@@ -20,10 +22,10 @@ class ApiAnswerModelNotFound extends ApiAnswer
      */
     public function __construct(string $field = null, string $message = null, string $name = null)
     {
-        if (is_null($message)){
-            $message = \Yii::t('app','Модель с таким ID не найдена');
-            if (!is_null($name)){
-                $message = \Yii::t('app','{name} с таким ID не найден(а)', ['name' => $name]);
+        if ($message === null) {
+            $message = Yii::t('app', 'Модель с таким ID не найдена');
+            if ($name !== null) {
+                $message = Yii::t('app', '{name} с таким ID не найден(а)', ['name' => $name]);
             }
         }
         parent::__construct([

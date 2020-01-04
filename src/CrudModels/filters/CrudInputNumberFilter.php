@@ -1,4 +1,5 @@
 <?php
+
 namespace sorokinmedia\api_helpers\CrudModels\filters;
 
 use sorokinmedia\api_helpers\CrudModels\CrudFilter;

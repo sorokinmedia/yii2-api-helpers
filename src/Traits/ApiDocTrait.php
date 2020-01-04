@@ -1,4 +1,5 @@
 <?php
+
 namespace sorokinmedia\api_helpers\Traits;
 
 /**

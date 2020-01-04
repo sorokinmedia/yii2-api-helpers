@@ -1,7 +1,9 @@
 <?php
+
 namespace sorokinmedia\api_helpers\ApiAnswer;
 
 use sorokinmedia\api_helpers\Controller\ApiController;
+use Yii;
 
 /**
  * Класс, описывающий успешное выполнение операции
@@ -19,8 +21,8 @@ class ApiAnswerSuccess extends ApiAnswer
      */
     public function __construct(string $message = null, $response = null)
     {
-        if (is_null($message)){
-            $message = \Yii::t('app', 'Успешно');
+        if ($message === null) {
+            $message = Yii::t('app', 'Успешно');
         }
         parent::__construct([
             'response' => $response,

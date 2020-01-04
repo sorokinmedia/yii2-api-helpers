@@ -1,7 +1,9 @@
 <?php
+
 namespace sorokinmedia\api_helpers\ApiAnswer;
 
 use sorokinmedia\api_helpers\Controller\ApiController;
+use Yii;
 
 /**
  * Класс, описывающий ошибку валидации входящих параметров
@@ -20,8 +22,8 @@ class ApiAnswerParamValidationError extends ApiAnswer
      */
     public function __construct(string $fields = null, string $message = null, $response = null)
     {
-        if (is_null($message)){
-            $message = \Yii::t('app', 'Неверные входные данные');
+        if ($message === null) {
+            $message = Yii::t('app', 'Неверные входные данные');
         }
         parent::__construct([
             'response' => $response,

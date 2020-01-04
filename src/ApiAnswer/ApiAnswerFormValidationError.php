@@ -27,13 +27,13 @@ class ApiAnswerFormValidationError extends ApiAnswer
 
         $messages[] = new RestMessage([
             'type' => RestMessage::TYPE_VALIDATION_ERROR,
-            'message' => $message ? $message : \Yii::t('app', 'Форма не прошла валидацию'),
+            'message' => $message ?: \Yii::t('app', 'Форма не прошла валидацию'),
             'targetField' => null
         ]);
 
         if ($form && $form->errors) {
             foreach ($form->errors as $attribute => $attributeErrors) {
-                array_walk($attributeErrors, function ($attributeError) use (&$messages, &$attribute) {
+                array_walk($attributeErrors, static function ($attributeError) use (&$messages, &$attribute) {
                     $messages[] = new RestMessage([
                         'type' => RestMessage::TYPE_VALIDATION_ERROR,
                         'message' => $attributeError,

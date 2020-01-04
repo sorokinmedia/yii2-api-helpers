@@ -1,7 +1,9 @@
 <?php
+
 namespace sorokinmedia\api_helpers\ApiAnswer;
 
 use sorokinmedia\api_helpers\Controller\ApiController;
+use Yii;
 
 /**
  * Класс, описывающий ответ сервера при ошибке
@@ -19,8 +21,8 @@ class ApiAnswerError extends ApiAnswer
      */
     public function __construct(string $message = null, $response = null)
     {
-        if (is_null($message)){
-            $message = \Yii::t('app', 'Ошибка');
+        if ($message === null) {
+            $message = Yii::t('app', 'Ошибка');
         }
         parent::__construct([
             'response' => $response,

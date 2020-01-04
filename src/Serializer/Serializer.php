@@ -1,6 +1,8 @@
 <?php
+
 namespace sorokinmedia\api_helpers\Serializer;
 
+use yii\data\Pagination;
 use yii\web\Link;
 
 /**
@@ -12,17 +14,17 @@ use yii\web\Link;
 class Serializer extends \yii\rest\Serializer
 {
     /**
-     * @param \yii\data\Pagination $pagination
+     * @param Pagination $pagination
      * @return array
      */
-    protected function serializePagination($pagination)
+    protected function serializePagination($pagination): array
     {
         return [
             $this->linksEnvelope => Link::serialize($pagination->getLinks(true)),
             $this->metaEnvelope => [
                 'totalCount' => $pagination->totalCount,
                 'pageCount' => $pagination->getPageCount(),
-                'currentPage' => ($pagination->getPageCount() == 0) ? 0 : $pagination->getPage() + 1,
+                'currentPage' => ($pagination->getPageCount() === 0) ? 0 : $pagination->getPage() + 1,
                 'perPage' => $pagination->getPageSize(),
             ],
         ];

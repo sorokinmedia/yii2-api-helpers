@@ -1,7 +1,9 @@
 <?php
+
 namespace sorokinmedia\api_helpers\ApiAnswer;
 
 use sorokinmedia\api_helpers\Controller\ApiController;
+use Yii;
 
 /**
  * Класс, описывающий ответ сервера, при котором важна передача ответа с данными
@@ -19,8 +21,8 @@ class ApiAnswerLog extends ApiAnswer
      */
     public function __construct(string $message = null, $response = null)
     {
-        if (is_null($message)){
-            $message = \Yii::t('app', 'Данные получены');
+        if ($message === null) {
+            $message = Yii::t('app', 'Данные получены');
         }
         parent::__construct([
             'response' => $response,

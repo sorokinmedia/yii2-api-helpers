@@ -1,8 +1,9 @@
 <?php
+
 namespace sorokinmedia\api_helpers\ApiAnswer;
 
-use yii\base\Model;
 use sorokinmedia\api_helpers\validators\ApiAnswerValidator;
+use yii\base\Model;
 
 /**
  * Стандартная форма ответа API сервисов
@@ -26,7 +27,7 @@ class ApiAnswer extends Model
     /**
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
             ['status', ApiAnswerValidator::class]

@@ -1,4 +1,5 @@
 <?php
+
 namespace sorokinmedia\api_helpers;
 
 use yii\base\Component;
