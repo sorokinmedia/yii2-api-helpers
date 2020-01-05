@@ -22,7 +22,7 @@ class ApiAnswerLog extends ApiAnswer
     public function __construct(string $message = null, $response = null)
     {
         if ($message === null) {
-            $message = Yii::t('app', 'Данные получены');
+            $message = Yii::t('app-sm-api-helpers', 'Данные получены');
         }
         parent::__construct([
             'response' => $response,

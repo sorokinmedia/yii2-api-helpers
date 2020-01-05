@@ -22,7 +22,7 @@ class ApiAnswerSuccess extends ApiAnswer
     public function __construct(string $message = null, $response = null)
     {
         if ($message === null) {
-            $message = Yii::t('app', 'Успешно');
+            $message = Yii::t('app-sm-api-helpers', 'Успешно');
         }
         parent::__construct([
             'response' => $response,

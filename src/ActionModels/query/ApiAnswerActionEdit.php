@@ -18,6 +18,6 @@ class ApiAnswerActionEdit extends ApiAnswerActionPost
     {
         parent::__construct($config);
         $this->id = 'edit';
-        $this->name = \Yii::t('app', 'Изменить');
+        $this->name = \Yii::t('app-sm-api-helpers', 'Изменить');
     }
 }

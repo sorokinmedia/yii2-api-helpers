@@ -23,9 +23,9 @@ class ApiAnswerModelNotFound extends ApiAnswer
     public function __construct(string $field = null, string $message = null, string $name = null)
     {
         if ($message === null) {
-            $message = Yii::t('app', 'Модель с таким ID не найдена');
+            $message = Yii::t('app-sm-api-helpers', 'Модель с таким ID не найдена');
             if ($name !== null) {
-                $message = Yii::t('app', '{name} с таким ID не найден(а)', ['name' => $name]);
+                $message = Yii::t('app-sm-api-helpers', '{name} с таким ID не найден(а)', ['name' => $name]);
             }
         }
         parent::__construct([

@@ -27,7 +27,7 @@ class ApiAnswerFormValidationError extends ApiAnswer
 
         $messages[] = new RestMessage([
             'type' => RestMessage::TYPE_VALIDATION_ERROR,
-            'message' => $message ?: \Yii::t('app', 'Форма не прошла валидацию'),
+            'message' => $message ?: \Yii::t('app-sm-api-helpers', 'Форма не прошла валидацию'),
             'targetField' => null
         ]);
 

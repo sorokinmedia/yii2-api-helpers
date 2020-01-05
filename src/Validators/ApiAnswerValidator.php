@@ -29,7 +29,7 @@ class ApiAnswerValidator extends Validator
             ApiController::STATUS_ERROR,
             ApiController::STATUS_LOG
         ], true)) {
-            throw new Exception(Yii::t('app', 'Неверный тип ответа'));
+            throw new Exception(Yii::t('app-sm-api-helpers', 'Неверный тип ответа'));
         }
     }
 }

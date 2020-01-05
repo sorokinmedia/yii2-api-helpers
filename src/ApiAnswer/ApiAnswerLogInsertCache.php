@@ -23,7 +23,7 @@ class ApiAnswerLogInsertCache extends ApiAnswer
     public function __construct(string $message = null, $response = null)
     {
         if ($message === null) {
-            $message = Yii::t('app', 'Данные получены и записаны в кеш');
+            $message = Yii::t('app-sm-api-helpers', 'Данные получены и записаны в кеш');
         }
         parent::__construct([
             'response' => $response,

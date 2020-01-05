@@ -22,7 +22,7 @@ class ApiAnswerError extends ApiAnswer
     public function __construct(string $message = null, $response = null)
     {
         if ($message === null) {
-            $message = Yii::t('app', 'Ошибка');
+            $message = Yii::t('app-sm-api-helpers', 'Ошибка');
         }
         parent::__construct([
             'response' => $response,

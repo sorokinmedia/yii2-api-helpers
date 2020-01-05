@@ -382,3 +382,7 @@ class UserController extends AdminApiController
  * @apiUse ErrorRespond
  */
 ~~~~
+
+## Translation
+
+Use `Yii::t('app-sm-api-helpers', '')` for messages which need to be translated.

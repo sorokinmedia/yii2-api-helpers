@@ -37,7 +37,7 @@ class ApiController extends Controller
         try {
             $action = $this->createAction($id);
             if ($action === null) {
-                throw new InvalidRouteException(Yii::t('app', 'Ошибка в роутинге: {unique_id}/{id}', [
+                throw new InvalidRouteException(Yii::t('app-sm-api-helpers', 'Ошибка в роутинге: {unique_id}/{id}', [
                     'unique_id' => $this->getUniqueId(),
                     'id' => $id
                 ]));
@@ -64,7 +64,7 @@ class ApiController extends Controller
                 // run the action
                 $result = $action->runWithParams($params);
                 if (!($result instanceof ApiAnswer)) {
-                    throw new RestAnswerException(Yii::t('app', 'Неправильный формат ответа, ожидался объект \sorokinmedia\api_helpers\ApiAnswer'));
+                    throw new RestAnswerException(Yii::t('app-sm-api-helpers', 'Неправильный формат ответа, ожидался объект \sorokinmedia\api_helpers\ApiAnswer'));
                 }
                 $result = $this->afterAction($action, $result);
                 // call afterAction on modules

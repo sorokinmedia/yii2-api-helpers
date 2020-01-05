@@ -23,7 +23,7 @@ class ApiAnswerParamValidationError extends ApiAnswer
     public function __construct(string $fields = null, string $message = null, $response = null)
     {
         if ($message === null) {
-            $message = Yii::t('app', 'Неверные входные данные');
+            $message = Yii::t('app-sm-api-helpers', 'Неверные входные данные');
         }
         parent::__construct([
             'response' => $response,

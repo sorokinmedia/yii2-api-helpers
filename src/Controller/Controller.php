@@ -37,7 +37,7 @@ class Controller extends \yii\rest\Controller
     public function actionError(): array
     {
         return [
-            'error' => Yii::t('app', 'Метод заперещен')
+            'error' => Yii::t('app-sm-api-helpers', 'Метод заперещен')
         ];
     }
 

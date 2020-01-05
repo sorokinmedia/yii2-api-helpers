@@ -34,7 +34,7 @@ class ErrorAction extends Action
     {
         if (($exception = Yii::$app->getErrorHandler()->exception) === null) {
             // action has been invoked not from error handler, but by direct route, so we display '404 Not Found'
-            $exception = new HttpException(404, Yii::t('app', 'Страница не найден'));
+            $exception = new HttpException(404, Yii::t('app-sm-api-helpers', 'Страница не найден'));
         }
 
         if ($exception instanceof HttpException) {
@@ -45,7 +45,7 @@ class ErrorAction extends Action
         if ($exception instanceof Exception) {
             $name = $exception->getName();
         } else {
-            $name = $this->defaultName ?: Yii::t('app', 'Ошибка');
+            $name = $this->defaultName ?: Yii::t('app-sm-api-helpers', 'Ошибка');
         }
         if ($code) {
             $name .= " (#$code)";
@@ -54,7 +54,7 @@ class ErrorAction extends Action
         if ($exception instanceof UserException) {
             $message = $exception->getMessage();
         } else {
-            $message = $this->defaultMessage ?: Yii::t('app', 'Внутрення ошибка');
+            $message = $this->defaultMessage ?: Yii::t('app-sm-api-helpers', 'Внутрення ошибка');
         }
 
         if (Yii::$app->getRequest()->getIsAjax()) {

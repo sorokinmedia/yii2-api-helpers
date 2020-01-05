@@ -22,7 +22,7 @@ class ApiAnswerForbidden extends ApiAnswer
     public function __construct(string $message = null, $response = null)
     {
         if ($message === null) {
-            $message = Yii::t('app', 'Доступ запрещен');
+            $message = Yii::t('app-sm-api-helpers', 'Доступ запрещен');
         }
         parent::__construct([
             'response' => $response,

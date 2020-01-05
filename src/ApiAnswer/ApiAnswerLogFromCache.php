@@ -23,7 +23,7 @@ class ApiAnswerLogFromCache extends ApiAnswer
     public function __construct(string $message = null, $response = null)
     {
         if ($message === null) {
-            $message = Yii::t('app', 'Данные получены из кеша');
+            $message = Yii::t('app-sm-api-helpers', 'Данные получены из кеша');
         }
         parent::__construct([
             'response' => $response,
